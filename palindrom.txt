@@ -1,0 +1,13 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        if(x < 0 || (x != 0 && x %10 ==0)){return false;}
+     int reverse=0,quo = x,rem =0;
+        while (quo >0){
+            rem = quo % 10 ;
+            reverse = 10 *reverse + rem;
+            quo= quo/10;        
+            }
+        return reverse == x;
+        
+    }
+}
